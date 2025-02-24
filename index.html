@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <aside class="sidebar flex justify-center items-center">
+            <form class="form flex flex-col w-full gap-5" action="">
+                <div>
+                    <p class="font-sans text-[18px] text-black font-semibold">Name</p>
+                    <input class="name p-2 w-full text-black rounded-md border border-[#c5c4c4] " required type="text">
+                </div>
+                <div>
+                    <p class="font-sans text-[18px] text-black font-semibold">Surname</p>
+                    <input class="surname p-2 w-full text-black rounded-md border border-[#c5c4c4]" required type="text">
+                </div>
+                <div>
+                    <p class="font-sans text-[18px] text-black font-semibold">Score</p>
+                    <input class="score p-2 w-full text-black rounded-md border border-[#c5c4c4]" required type="number">
+                </div>            
+                <button class="bg-blue-700 p-2 rounded-md font-semibold hover:bg-blue-900 transition-colors duration-200">Submit</button>
+            </form>
+        </aside>
+        <main>
+            <div class="card__wrapper flex flex-col w-full items-center justify-center px-10 my-5">
+            </div>
+        </main>
+        
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

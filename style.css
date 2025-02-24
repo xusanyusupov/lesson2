@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+}
+.sidebar {
+    width: 350px;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    border-right: 1px solid #c5c4c4;
+    box-shadow: 0 0 5px rgb(105, 105, 105);
+}
+form input{
+    outline: none;
+}
+main{
+    width: calc(100% - 350px);
+}
