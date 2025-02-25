@@ -2,6 +2,7 @@ let form = document.querySelector('.form');
 let namee = document.querySelector('.name');
 let surname = document.querySelector('.surname');
 let score = document.querySelector('.score');
+let date = document.querySelector('.date')
 let card__wrapper = document.querySelector('.card__wrapper');
 
 let allData = [];
@@ -25,6 +26,7 @@ function renderUser() {
                     <th class="p-2 border-t border-b border-gray-300">Student name</th>
                     <th class="p-2 border-t border-b border-gray-300">Student surname</th>
                     <th class="p-2 border-t border-b border-gray-300">Student score</th>
+                    <th class="p-2 border-t border-b border-gray-300">Student date</th>
                     <th class="p-2 border-t border-b border-gray-300">Opportunities</th>
                 </tr>
             </thead>
@@ -36,6 +38,7 @@ function renderUser() {
             <tr>
                 <td class="p-3 font-semibold border-b border-gray-300 text-center">${item.username}</td>
                 <td class="p-3 font-semibold border-b border-gray-300 text-center">${item.usersname}</td>
+                <td class="p-3 font-semibold border-b border-gray-300 text-center">${item.userdate}</td>
                 <td class="p-3 font-semibold border-b border-gray-300 text-center">${item.userscore}</td>
                 <td class="p-3 border-b border-gray-300 flex items-center justify-center gap-5">
                     <button class="bg-blue-700 w-w-5 text-white px-2 py-1 rounded-md" onclick="editUser(${index})">Tahrirlash</button>
@@ -64,6 +67,7 @@ function editUser(index) {
     namee.value = user.username;
     surname.value = user.usersname;
     score.value = user.userscore;
+    date.value = user.userdate;
     allData.splice(index, 1);
     renderUser();
     save();
@@ -77,6 +81,7 @@ form.addEventListener('submit', function(event) {
         userid: Date.now(), 
         username: namee.value,
         usersname: surname.value,
+        userdate: date.value,
         userscore: +score.value
     };
     allData.push(user);
